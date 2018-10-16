@@ -90,8 +90,8 @@ $(function() {
            });
 
            it('completed', function(){
-               const feed = document.querySelector('.feed');
-               expect(entries.children.length > 0).toBe(true);
+             //const feed = document.querySelector('.feed');
+               expect($('.feed .entry').length).not.toBe(0);
            });
 
           });
