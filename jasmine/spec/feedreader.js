@@ -39,7 +39,7 @@ $(function() {
 
         /* a new test spec that check if each of the allFeeds name is defined 
             * and their lenghts anything greater than 0. first we loop through the array of the feeds
-            * sma principle applied above in the case of the urls.
+            * same principle applied above in the case of the urls.
          */
         it('define name', function() {
             for(let feed of allFeeds) {
@@ -52,10 +52,8 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
        describle('the menu', function() {
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
+        /* We try to query the body element, to check if the menu item is actually hidden, 
+        * Our Jasmine test would expect the menu-hidden class to be true
          */
         it('it is hidden', function(){
             const body = document.querySelector('body');
@@ -81,7 +79,7 @@ $(function() {
     
     /* TODO: Write a new test suite named "Initial Entries" */
           describe('Initial Entries', function() {
-                /* TODO: Write a test that ensures when the loadFeed
+                /* A test that ensures when the loadFeed
             * function is called and completes its work, there is at least
             * a single .entry element within the .feed container.
             * Remember, loadFeed() is asynchronous so this test will require
@@ -93,7 +91,7 @@ $(function() {
 
            it('completed', function(){
                const feed = document.querySelector('.feed');
-               expect(feed.children.length > 0).toBe(true);
+               expect(entries.children.length > 0).toBe(true);
            });
 
           });
