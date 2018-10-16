@@ -99,7 +99,7 @@ $(function() {
     /* TODO: Write a new test suite named "New Feed Selection" */
          describe('New Feed Selection', function(){
         let initialFeed;
-        var newFeed;
+        let newFeed;
 
         // save previous entries and load new ones
         beforeEach(function(done){
