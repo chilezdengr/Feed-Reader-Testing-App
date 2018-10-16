@@ -27,9 +27,8 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
+        /* a new test spec that check if each of the allFeeds url is defined 
+            * and their lenghts anything greater than 0. first we loop through the array of the feeds
          */
         it('define url', function() {
             for(let feed of allFeeds) {
@@ -38,9 +37,9 @@ $(function() {
             }
         });
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
+        /* a new test spec that check if each of the allFeeds name is defined 
+            * and their lenghts anything greater than 0. first we loop through the array of the feeds
+            * sma principle applied above in the case of the urls.
          */
         it('define name', function() {
             for(let feed of allFeeds) {
@@ -52,7 +51,7 @@ $(function() {
 
 
     /* TODO: Write a new test suite named "The menu" */
-
+       describle('the menu', function() {
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
@@ -63,10 +62,9 @@ $(function() {
             expect(body.classList.contains('menu-hidden')).toBe(true)
         });
 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
+         /* this test checks for the toggle-ability of the menu. 
+         *the body element is querried for the hidden menu class and sets it to false which displays 
+         * the menu. And when the menu-hidden is expected to be true the menu is hidden.
           */
 
           it('toggles on and off', function() {
@@ -75,7 +73,12 @@ $(function() {
 
               menu.click();
               expect(body.classList.contains('menu-hidden')).toBe(false);
+              
+              menu.click();
+              expect(body.classList.contains('menu-hidden')).toBe(true);
           });
+         });
+    
     /* TODO: Write a new test suite named "Initial Entries" */
           describe('Initial Entries', function() {
                 /* TODO: Write a test that ensures when the loadFeed
