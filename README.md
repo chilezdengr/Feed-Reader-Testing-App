@@ -9,13 +9,16 @@ The Feed Reader is an RSS that displays feeds from the Udacity blog. This applic
 
 
 ## Getting Started
-To get started, download the zipped folder:
+To get started, Clone the repository
+  `git@github.com:chilezdengr/Feed-Reader-Testing-App.git`
+
+ Or download the zipped folder:
 
 * Unbundle the files on your local machine
 * All files are to be located in one folder
 * Run the `index.html` file on the browser
 
-All tests should be passed without failure
+All tests containing 7 specs should be passed without failure
 
 
 ## Navigating the Webpage
